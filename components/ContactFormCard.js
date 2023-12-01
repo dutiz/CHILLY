@@ -9,7 +9,7 @@ export default function ContactFormCard({ t }) {
           {t('formTitle')}
         </p>
         <h1 className="mt-5 text-4xl text-gray-700  font-bold">{t('formSubtitle')}</h1>
-        <form name="contact" action="/success" method="POST" data-netlify="true">
+        <form name="contact" netlify>
           <div className="row mt-10">
             <div className="lg:col-6">
               <input

@@ -10,12 +10,7 @@ export default function ContactFormCard({ t }) {
           {t('formTitle')}
         </p>
         <h1 className="mt-5 text-4xl text-gray-700  font-bold">{t('formSubtitle')}</h1>
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          encType="application/x-www-form-urlencoded"
-        >
+        <form name="contact" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="contact" />
           <div className="row mt-10">
             <div className="lg:col-6">
@@ -24,7 +19,6 @@ export default function ContactFormCard({ t }) {
                 name="Name"
                 placeholder={t('name')}
                 className="border-2 border-yellow-400 p-5 rounded-3xl w-full placeholder-black font-bold"
-                required
               />
             </div>
             <div className="lg:col-6 lg:mt-0 mt-8">
@@ -33,7 +27,6 @@ export default function ContactFormCard({ t }) {
                 name="Email"
                 placeholder={t('email')}
                 className="border-2 border-yellow-400 p-5 rounded-3xl w-full placeholder-black font-bold"
-                required
               />
             </div>
             <div className="lg:col-6 mt-8">
@@ -42,7 +35,7 @@ export default function ContactFormCard({ t }) {
                 name="Subject"
                 placeholder={t('subject')}
                 className="border-2 border-yellow-400 p-5 rounded-3xl w-full placeholder-black font-bold"
-                required
+                require
               />
             </div>
             <div className="lg:col-6 mt-8">
@@ -51,7 +44,6 @@ export default function ContactFormCard({ t }) {
                 name="Phone"
                 placeholder={t('phone')}
                 className="border-2 border-yellow-400 p-5 rounded-3xl w-full placeholder-black font-bold"
-                required
               />
             </div>
             <div className="col-12">
@@ -62,7 +54,6 @@ export default function ContactFormCard({ t }) {
                 rows="10"
                 placeholder={t('message')}
                 className="mt-8 p-5 border-2 border-yellow-400 rounded-3xl w-full placeholder-black font-bold"
-                required
               />
               <button type="submit" className="mt-10 bg-yellow-400 px-10 rounded-3xl py-5">
                 {t('buttonMessage')}

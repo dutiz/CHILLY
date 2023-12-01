@@ -22,7 +22,7 @@ export default function Contact() {
               <h1 className="mt-5 text-4xl text-gray-700  font-bold">{t('formSubtitle')}</h1>
               <form
                 name="contact"
-                method="POST"
+                method="post"
                 data-netlify="true"
                 encType="application/x-www-form-urlencoded"
               >

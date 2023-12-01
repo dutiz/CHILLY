@@ -20,8 +20,7 @@ export default function BookingSection() {
                 <h1 className="mt-5 md:text-5xl text-xl text-center font-bold text-white">
                   {t('title')}
                 </h1>
-                <form name="books" action="/success" method="POST" data-netlify="true">
-                  <input type="hidden" name="form-name" value="books" />
+                <form name="bookingTable" action="/success" method="post" data-netlify="true">
                   <div className="row mt-10">
                     <div className="lg:col-4">
                       <input

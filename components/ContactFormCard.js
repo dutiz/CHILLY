@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/no-unknown-property */
 'use client'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
@@ -26,7 +27,7 @@ export default function ContactFormCard({ t }) {
         </p>
         <h1 className="mt-5 text-4xl text-gray-700  font-bold">{t('formSubtitle')}</h1>
         <form data-netlify="true" name="contactForm" method="post" onSubmit={handleSubmit}>
-              <input type="hidden" name="form-name" value="contactForm" />
+          <input type="hidden" name="form-name" value="contactForm" />
           <div className="row mt-10">
             <div className="lg:col-6">
               <input
@@ -72,7 +73,7 @@ export default function ContactFormCard({ t }) {
               />
               <input type="submit" className="mt-10 bg-yellow-400 px-10 rounded-3xl py-5">
                 {t('buttonMessage')}
-              </button>
+              </input>
             </div>
           </div>
         </form>

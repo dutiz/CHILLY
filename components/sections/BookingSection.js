@@ -1,7 +1,25 @@
+/* eslint-disable no-console */
 'use client'
+import emailjs from '@emailjs/browser'
 import { useTranslations } from 'next-intl'
+import { useRef } from 'react'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 export default function BookingSection() {
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs.sendForm('service_r5tqmfi', 'template_5zywcbn', form.current, 'fnIPZSfiM6SvBlMVM').then(
+      (result) => {
+        console.log(result.text)
+      },
+      (error) => {
+        console.log(error.text)
+      }
+    )
+  }
+
   const t = useTranslations('BookingSection')
   return (
     <div
@@ -20,7 +38,7 @@ export default function BookingSection() {
                 <h1 className="mt-5 md:text-5xl text-xl text-center font-bold text-white">
                   {t('title')}
                 </h1>
-                <form name="bookingTable" action="/success" method="post" data-netlify="true">
+                <form ref={form} onSubmit={sendEmail}>
                   <div className="row mt-10">
                     <div className="lg:col-4">
                       <input
